@@ -47,22 +47,6 @@ class StarSystem
     return planets_found.map {|planet| planet.name}
   end
 
-  # def get_planet_names_sorted_by_increasing_distance_from_sun
-  #   already_checked_planets = []
-  #   sorted_planet_names = []
-  #   for planet in @planets
-  #     already_checked_planets.push(planet)
-  #   end
-  #   return already_checked_planets
-  #   for checked_planet in already_checked_planets
-  #     smallest_planet = checked_planet.distance_from_sun.min()
-  #     return smallest_planet
-  #   return sorted_planet_names << smallest_planet.name
-  #   return already_checked_planets.delete(smallest_planet)
-  # end
-  # return sorted_planet_names
-  # end
-
   def get_planet_names_sorted_by_size_decreasing
     planets_found = @planets.sort_by {|planet| planet.diameter}.reverse
     return planets_found.map {|planet| planet.name}
